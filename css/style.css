@@ -2,5 +2,135 @@ body {
     background-color: #fff;
     background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px), linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.2em;
-    ;
+}
+
+#displayResult {
+    height: 125px;
+    width: 400px;
+    background-color: grey;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+}
+#mainToy {
+    height: 600px;
+    width: 600px;
+    border-radius: 600px;
+    background-color: #312F31;
+    margin: 0 auto;
+    margin-top: 25px;
+    position: relative;
+    box-shadow: 0px 0px 20px 10px #888888;
+}
+#innerConsole {
+    height: 300px;
+    width: 300px;
+    border-radius: 280px;
+    background-color: #C2BBAA;
+    position: absolute;
+    top: 130px;
+    left: 130px;
+    border: 20px solid #312F31;
+}
+#gameTitle {
+    top: 140px;
+    left: 140px;
+}
+#green {     // make button class for same attributes
+    height: 260px;
+    width: 260px;
+    top: 40px;
+    left: 40px;
+    background-color: #158D43;
+    border-radius: 450px 0px 0px 0px;
+    position: absolute;
+}
+#red {
+    height: 260px;
+    width: 260px;
+    background-color: #FF3F3C;
+    top: 40px;
+    right: 40px;
+    position: absolute;
+    border-radius: 0px 450px 0px 0px;
+}
+#yellow {
+    height: 260px;
+    width: 260px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #F5D825;
+    border-radius: 0px 0px 0px 450px;
+    position: absolute;
+}
+#blue {
+    height: 260px;
+    width: 260px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #208BD6;
+    border-radius: 0px 0px 450px 0px;
+    position: absolute;
+}
+#horizontal {
+    position: absolute;
+    width: 580px;
+    height: 20px;
+    top: 290px;
+    background-color: #312F31;
+}
+#vertical {
+    position: absolute;
+    width: 20px;
+    height: 580px;
+    margin-left: 290px;
+    background-color: #312F31;
+}
+#gameTitle {
+    margin: 0 auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Play', sans-serif;
+    color: #312F31;
+}
+#timeToMove {
+    height: 30px;
+    width: 40px;
+    background-color: black;
+    color: #F5D825;
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    border: 4px solid #312F31;
+    border-radius: 4px;
+    position: absolute;
+    left: 75px;
+}
+#roundDisplay {
+    height: 30px;
+    width: 40px;
+    background-color: black;
+    color: #ff0101;
+    font-size: 27px;
+    text-align: center;
+    font-weight: bold;
+    border: 4px solid #312F31;
+    border-radius: 4px;
+    right: 70px;
+    top: 113px;
+    position: absolute;
+}
+#startButton {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background-color: #ED424B;
+    margin: 0 auto;
+    margin-top: 60px;
+    position: absolute;
+    left: 65px;
+    outline: none;
+    border-color: #312F31;
 }
