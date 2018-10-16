@@ -27,3 +27,12 @@ $colors.each(function() {
     sound: $('#' + colorName + 'Sound') //referencing sounds by unique ID's
   };
 });
+
+//initiate game with Simon's move
+function gameSequence() {
+  if (counter === 0) {
+    setTimeout(simonMove, 300);
+  } else {
+    myMove();
+  }
+}
