@@ -7,3 +7,13 @@ var playerTimer = false; //determines when timed period begins for a move
 var winFlashes = 0; // display winning signal
 var $colors = $('.section'); // each of the clored sections stored in an array
 var difficulty = "easy"; // default difficulty setting
+
+//setting length of Simon's moves for varying difficulty
+var difficultyUnits = {
+  easy: {
+    simonsSpeed: 1000
+  },
+  hard: {
+    simonsSpeed: 500
+  }
+};
