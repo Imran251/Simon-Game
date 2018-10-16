@@ -17,3 +17,13 @@ var difficultyUnits = {
     simonsSpeed: 500
   }
 };
+
+//assigning distinct sounds to each colored section and storing as objects in colorObj
+var colorObj = {};
+$colors.each(function() {
+  var $colorName = $(this).attr('id');
+  colorObj[$colorName] = {
+    element: $(this),
+    sound: $('#' + colorName + 'Sound') //referencing sounds by unique ID's
+  };
+});
