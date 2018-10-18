@@ -36,3 +36,12 @@ function gameSequence() {
     myMove();
   }
 }
+
+function simonMove() {
+  var newMove = $colors[(Math.floor(Math.random() * 4))]; //picking random colored section
+  simonSequence.push(newMove); //adding Simon's move to his sequence
+  lightSimonsNextColor(0); //start's Simon's sequence from the begining
+  counter++; //switch from Simon to player
+  roundCounter++; //tracking the number of rounds in the game
+  $('#roundDisplay').text(roundCounter); //display current round
+}
