@@ -62,3 +62,7 @@ function lightSimonsNextColor(index) {
       } else {
         beginPlayersTurn();
         startTimer();
+      }
+}, difficultyUnits[difficulty].simonsSpeed); //turning off button based on difficutly
+
+}
