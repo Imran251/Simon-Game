@@ -50,3 +50,15 @@ function lightSimonsNextColor(index) {
   var $currentColor = $(simonSequence[index]);
   var colorName = getColorName($currentColor);
   lightUpButton(colorName, true); //light up colored section with sound
+
+  setTimeout(function() {
+      $currentColor.css('filter', 'brightness(100%)');
+      var nextIndex = index + 1;
+
+      if (nextIndex < simonSequence.length) { //checking if all of Simon's sequence has been played back
+        setTimeout(function() {
+          lightSimonsNextColor(nextIndex);
+        }, difficultyUnits[difficulty].simonsSpeed / 2); //time in between each button press
+      } else {
+        beginPlayersTurn();
+        startTimer();
