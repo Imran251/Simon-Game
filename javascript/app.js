@@ -45,3 +45,8 @@ function simonMove() {
   roundCounter++; //tracking the number of rounds in the game
   $('#roundDisplay').text(roundCounter); //display current round
 }
+
+function lightSimonsNextColor(index) {
+  var $currentColor = $(simonSequence[index]);
+  var colorName = getColorName($currentColor);
+  lightUpButton(colorName, true); //light up colored section with sound
