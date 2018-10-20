@@ -97,3 +97,19 @@ function myMove() {
     gameOver();
     return; //stops comparing sequences
   }
+
+  if (mySequence.length == simonSequence.length) { // Determine if the turn was completed or not
+    var equality = compareArrays(mySequence, simonSequence)
+    if (equality) {
+      if (roundCounter == 6) { //number of rounds needed to win the game
+        userWin();
+      } else {
+        setTimeout(simonMove, 1500);
+      }
+    } else {
+      gameOver();
+    }
+  } else {
+    startTimer(); //restart the timer for each move
+  }
+}
