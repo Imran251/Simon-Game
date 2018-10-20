@@ -24,7 +24,7 @@ $colors.each(function() {
   var $colorName = $(this).attr('id');
   colorObj[$colorName] = {
     element: $(this),
-    sound: $('#' + colorName + 'Sound') //referencing sounds by unique ID's
+    sound: $('#' + $colorName + 'Sound') //referencing sounds by unique ID's
   };
 });
 
@@ -66,3 +66,34 @@ function lightSimonsNextColor(index) {
 }, difficultyUnits[difficulty].simonsSpeed); //turning off button based on difficutly
 
 }
+
+function beginPlayersTurn() {
+  mySequence = [];
+}
+
+//player has 5 seconds to complete move
+function startTimer() {
+  clearInterval(playerTimer);
+  var countDown = 6;
+  playerTimer = setInterval(function() {
+    countDown = countDown - 1;
+    $("#timeToMove").text(countDown);
+    if (countDown < 1) { // end the game when time runs out
+      gameOver();
+    }
+  }, 1000)
+}
+
+
+function myMove() {
+  $("#timeToMove").text("5");
+
+  //countdown between moves, resets after move
+  if (playerTimer) {
+    clearInterval(playerTimer);
+  }
+
+  if (!compareLastButtonPress()) { //if player makes wrong move in sequence, end game
+    gameOver();
+    return; //stops comparing sequences
+  }
