@@ -81,7 +81,7 @@ function startTimer() {
     if (countDown < 1) { // end the game when time runs out
       gameOver();
     }
-  }, 1000)
+  }, 1000);
 }
 
 
@@ -99,7 +99,7 @@ function myMove() {
   }
 
   if (mySequence.length == simonSequence.length) { // Determine if the turn was completed or not
-    var equality = compareArrays(mySequence, simonSequence)
+    var equality = compareArrays(mySequence, simonSequence);
     if (equality) {
       if (roundCounter == 6) { //number of rounds needed to win the game
         userWin();
@@ -196,7 +196,7 @@ function lightUpButton(colorName, playSound) {
 
   if (playSound) { // play color sound if true
     stopAllSounds(); //stops sound of previously played button before current sound
-    color.sound[0].play() //play() method starts playing the current audio
+    color.sound[0].play(); //play() method starts playing the current audio
   }
 }
 
