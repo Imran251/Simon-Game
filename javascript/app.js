@@ -220,7 +220,7 @@ $('#resetButton').click(function() {
   $('#mainToy').removeClass("rotate");
   $(".winLoseMessage").hide();
   window.clearInterval(playerTimer);
-})
+});
 
 $("#difficultyToggle").change(function() {
   if ($(this).is(":checked")) { //jQuery filter listens to toggle switch for difficulty setting
@@ -228,12 +228,12 @@ $("#difficultyToggle").change(function() {
   } else {
     difficulty = "easy";
   }
-})
+});
 
 //rotate toy when clicking crazy mode button with question mark
 $("#crazyMode").click(function() {
   $("#mainToy").toggleClass("rotate");
-})
+});
 
 function stopAllSounds() { //make all sounds distinct
   $(".sound").each(function() {
