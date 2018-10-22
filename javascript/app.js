@@ -130,3 +130,30 @@ function compareArrays(arr1, arr2) { //checking if each of the moves are the sam
   }
   return true;
 }
+
+//light up yellow section with unique sound to signify player loss
+function gameOver() {
+  lightUpButton("yellow", false);
+  $('#razz')[0].play();
+  setTimeout(function() {
+    $('#yellow').css('filter', 'brightness(100%)');
+  }, 1400);
+
+  simonSequence.length = 0;
+  mySequence.length = 0;
+  window.clearInterval(playerTimer);
+  $("#playerAlertLose").show(); //display losing text alert
+}
+
+//when player clicks section, light up with sound, add to sequence
+function playerColorMousedown() {
+  var colorName = getColorName(this);
+  lightUpButton(colorName, true); //move to mouseUp? Add js .loop()?
+  mySequence.push(this);
+}
+
+//turn off colored section
+function playerColorMouseup() {
+  $(this).css('filter', 'brightness(100%)');
+  myMove(); // determine when it's simons move
+}
