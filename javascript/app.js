@@ -113,3 +113,20 @@ function myMove() {
     startTimer(); //restart the timer for each move
   }
 }
+
+function compareLastButtonPress() { //comparing current move with one before it
+  var index = mySequence.length - 1;
+  var lastButton = getColorName(mySequence[index]);
+  var simonsMoveAtIndex = getColorName(simonSequence[index]);
+
+  return lastButton == simonsMoveAtIndex;
+}
+
+function compareArrays(arr1, arr2) { //checking if each of the moves are the same
+  for (var i = 0; i < arr1.length; i++) {
+    if (arr1[i] !== arr2[i]) {
+      return false;
+    }
+  }
+  return true;
+}
