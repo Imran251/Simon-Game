@@ -157,3 +157,87 @@ function playerColorMouseup() {
   $(this).css('filter', 'brightness(100%)');
   myMove(); // determine when it's simons move
 }
+
+//all colored section flash 4 times in a row to signify the user has won
+function userWin() {
+  winFlashes++;
+  for (var i = 0; i < 4; i++) {
+    $colors.each(function() {
+      var color = $(this); //referencing all colored sections (only $color = $(this)) ($colors.each(color.each())
+      var turnOnIn = 1000 * i;
+      var turnOffIn = turnOnIn + 500;
+
+      //0 : turn on 0, turn off in 500
+      //1 : turn on in 1000, turn off in 1500
+      //2 : turn on in 2000, turn off in 2500
+      //3: turn on in 3000, turn off in 3500
+
+      //turn on all colored sections
+      setTimeout(function() {
+        var colorName = getColorName(color);
+        lightUpButton(colorName, false); //Do not play section's sound
+      }, turnOnIn);
+
+      //turn off all colored sections
+      setTimeout(function() {
+        color.css('filter', 'brightness(100%)');
+      }, turnOffIn);
+
+      window.clearInterval(playerTimer);
+    });
+  }
+  $("#playerAlert").show();
+}
+
+//turn on colored section, check if sound will be played
+function lightUpButton(colorName, playSound) {
+  color = colorObj[colorName];
+  color.element.css('filter', 'brightness(160%)');
+
+  if (playSound) { // play color sound if true
+    stopAllSounds(); //stops sound of previously played button before current sound
+    color.sound[0].play() //play() method starts playing the current audio
+  }
+}
+
+//get the name of individual colored section
+function getColorName(element) {
+  return $(element).attr('id');
+}
+
+$('#startButton').click(gameSequence); // Start game
+
+//controls when colored section turns on and off with mouse
+$colors.on("mousedown", playerColorMousedown);
+$colors.on("mouseup", playerColorMouseup);
+
+$('#resetButton').click(function() {
+  simonSequence.length = 0;
+  mySequence.length = 0;
+  roundCounter = 0;
+  $('#roundDisplay').text(0);
+  $("#timeToMove").text("5");
+  $('#mainToy').removeClass("rotate");
+  $(".winLoseMessage").hide();
+  window.clearInterval(playerTimer);
+})
+
+$("#difficultyToggle").change(function() {
+  if ($(this).is(":checked")) { //jQuery filter listens to toggle switch for difficulty setting
+    difficulty = "hard";
+  } else {
+    difficulty = "easy";
+  }
+})
+
+//rotate toy when clicking crazy mode button with question mark
+$("#crazyMode").click(function() {
+  $("#mainToy").toggleClass("rotate");
+})
+
+function stopAllSounds() { //make all sounds distinct
+  $(".sound").each(function() {
+    this.pause();
+    this.currentTime = 0;
+  });
+}
