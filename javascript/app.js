@@ -5,7 +5,7 @@ var roundCounter = 0; // currnet game round
 var isDown = false; // to determine when the mouse is pressed down
 var playerTimer = false; //determines when timed period begins for a move
 var winFlashes = 0; // display winning signal
-var $colors = $('.section'); // each of the clored sections stored in an array
+var $colors = $('.section'); // each of the colored sections stored in an array
 var difficulty = "easy"; // default difficulty setting
 
 //setting length of Simon's moves for varying difficulty
@@ -55,7 +55,7 @@ function lightSimonsNextColor(index) {
       $currentColor.css('filter', 'brightness(100%)');
       var nextIndex = index + 1;
 
-      if (nextIndex < simonSequence.length) { //checking if all of Simon's sequence has been played back
+      if (nextIndex < simonSequence.length) { //checking if all of Simon's sequences has been played back
         setTimeout(function() {
           lightSimonsNextColor(nextIndex);
         }, difficultyUnits[difficulty].simonsSpeed / 2); //time in between each button press
