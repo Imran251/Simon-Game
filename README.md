@@ -1,2 +1,2 @@
 # Simon-Game
-In Progress
+https://imran251.github.io/Simon-Game/
