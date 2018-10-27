@@ -25,8 +25,13 @@ Continue in this manner as long as you can repeat the sequence correctly.
 If you fail to repeat a sequence exactly or if you take more than 5 seconds to repeat a signal, SIMON responds with a "RAZZ" sound indicating that you have lost.
 
 Technology Used
+
 HTML5
+
 CSS
+
 SVG
+
 Javascript
+
 Jquery
