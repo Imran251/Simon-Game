@@ -7,8 +7,6 @@ The Classic Game of Memory Skill
 Think fast... SIMON says, "Chase my flashing lights and sounds"!
 
 
-
-
 Rules
 Press START button; 
 
