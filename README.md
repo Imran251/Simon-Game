@@ -37,3 +37,5 @@ SVG
 Javascript
 
 Jquery
+
+How to play
