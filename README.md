@@ -38,4 +38,4 @@ Javascript
 
 Jquery
 
-How to play
+How to play this game
