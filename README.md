@@ -1,4 +1,4 @@
-# Simon-Game
+# Simon-Game ®
 
 ## The Classic Game of Memory Skill
 
