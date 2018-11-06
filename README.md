@@ -2,11 +2,7 @@
 
 ## The Classic Game of Memory Skill
 
-https://imran251.github.io/Simon-Game/
-
-
-
-##Think fast... SIMON says, "Chase my flashing lights and sounds"!
+## Think fast... SIMON says, "Chase my flashing lights and sounds"!
 
 
 
@@ -41,3 +37,5 @@ Javascript
 Jquery
 
 How to play this game
+
+https://imran251.github.io/Simon-Game/
