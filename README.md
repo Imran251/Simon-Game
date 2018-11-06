@@ -4,7 +4,7 @@ https://imran251.github.io/Simon-Game/
 
 
 
-##The Classic Game of Memory Skill
+##The Classic Game of Memory Skill##
 
 ##Think fast... SIMON says, "Chase my flashing lights and sounds"!
 
