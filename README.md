@@ -6,25 +6,22 @@
 
 ![alt text](https://github.com/Imran251/Simon-Game/blob/master/assets/pic288369.jpg)
 
+## Rules
+1. Press START button; 
 
+2. SIMON will illuminate the first colored section in a sequence.
 
+3. Begin by pressing the same section.
 
-Rules
-Press START button; 
+4. SIMON will duplicate the first move and add one.
 
-SIMON will illuminate the first colored section in a sequence.
+5. Repeat these two signals by pressing the same sections.
 
-Begin by pressing the same section.
+6. SIMON will duplicate these signals and continue to add one.
 
-SIMON will duplicate the first move and add one.
+7. Continue in this manner as long as you can repeat the sequence correctly.
 
-Repeat these two signals by pressing the same sections.
-
-SIMON will duplicate these signals and continue to add one.
-
-Continue in this manner as long as you can repeat the sequence correctly.
-
-If you fail to repeat a sequence exactly or if you take more than 5 seconds to repeat a signal, SIMON responds with a "RAZZ" sound indicating that you have lost.
+8. If you fail to repeat a sequence exactly or if you take more than 5 seconds to repeat a signal, SIMON responds with a "RAZZ" sound indicating that you have lost.
 
 Technology Used
 
