@@ -1,8 +1,8 @@
 # Simon-Game
 
-## The Classic Game of Memory Skill
+### The Classic Game of Memory Skill
 
-## Think fast... SIMON says, "Chase my flashing lights and sounds"!
+### Think fast... SIMON says, "Chase my flashing lights and sounds"!
 
 
 
