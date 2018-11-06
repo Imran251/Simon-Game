@@ -2,7 +2,7 @@
 
 ## The Classic Game of Memory Skill
 
-## Think fast... SIMON says, "Chase my flashing lights and sounds"! 
+## _Think fast... SIMON says, "Chase my flashing lights and sounds"!_
 
 ![alt text](https://github.com/Imran251/Simon-Game/blob/master/assets/pic288369.jpg)
 
@@ -50,7 +50,7 @@
 #### In bash, type:
 
 1. 'git clone https://github.com/Imran251/Simon-Game.git'
-2. 'git cd SimonJS'
+2. 'git cd Simon-Game'
 3. 'open index.html'
 
 ## Sounds for specific sections
